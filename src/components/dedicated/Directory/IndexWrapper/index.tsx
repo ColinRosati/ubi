@@ -9,9 +9,9 @@ import IndexList from './IndexList/IndexList';
 
 const IndexWrapper: FC = () => {
   const ubiList: Ubi[] = useSelector(state => state.ubiList);
-  const _body = !!ubiList.length ? <IndexList /> : <Loader />;
+  const body = !!ubiList.length ? <IndexList /> : <Loader />;
 
-  return <div className={styles.wrapper}>{_body}</div>;
+  return <div className={styles.wrapper}>{body}</div>;
 };
 
 export default IndexWrapper;

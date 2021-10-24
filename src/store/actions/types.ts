@@ -1,4 +1,3 @@
-import { AxiosResponse } from 'axios';
 import { Ubi } from 'types';
 
 export enum ActionType {
@@ -10,7 +9,7 @@ export enum ActionType {
 
 export interface FetchUbisAction {
   type: ActionType;
-  payload: Promise<AxiosResponse<Ubi[]>> | string;
+  payload: Ubi[] | string;
 }
 
 export type Action = FetchUbisAction;
